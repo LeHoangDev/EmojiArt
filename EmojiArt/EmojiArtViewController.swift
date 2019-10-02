@@ -19,6 +19,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
 
     @IBOutlet weak var dropZone: UIView! {
         didSet {
+            //The delegate class which handles drag and drop interaction is the EmojiArtViewController itself
             dropZone.addInteraction(UIDropInteraction(delegate: self))
         }
     }

@@ -13,6 +13,7 @@ class EmojiArtView: UIView {
     
     var backgroundImage: UIImage? {
         didSet{
+            //You can use this method or the setNeedsDisplay(_:) to notify the system that your view’s contents need to be redrawn.
             setNeedsDisplay()
         }
     }
