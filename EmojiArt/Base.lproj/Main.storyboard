@@ -57,7 +57,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THj-fs-6Qv">
                                 <rect key="frame" x="0.0" y="80" width="703.5" height="688"/>
                                 <subviews>
-                                    <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Bf-wTf">
+                                    <scrollView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Bf-wTf">
                                         <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                                     </scrollView>
                                 </subviews>
