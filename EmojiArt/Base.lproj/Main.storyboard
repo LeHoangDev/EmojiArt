@@ -52,13 +52,34 @@
                                             <outlet property="label" destination="zBU-Ll-90N" id="0LU-Lg-GFj"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DropPlaceHolderCell" id="VH0-pT-uV9">
+                                        <rect key="frame" x="90" y="7.5" width="80" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cpG-KX-Zjy">
+                                                    <rect key="frame" x="30" y="22.5" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="cpG-KX-Zjy" firstAttribute="centerY" secondItem="VH0-pT-uV9" secondAttribute="centerY" id="2ZJ-MJ-ohP"/>
+                                            <constraint firstItem="cpG-KX-Zjy" firstAttribute="centerX" secondItem="VH0-pT-uV9" secondAttribute="centerX" id="C9R-7r-y2T"/>
+                                        </constraints>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THj-fs-6Qv">
                                 <rect key="frame" x="0.0" y="80" width="703.5" height="688"/>
                                 <subviews>
-                                    <scrollView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Bf-wTf">
+                                    <scrollView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="703.5" placeholderIntrinsicHeight="768" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Bf-wTf">
                                         <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="703.5" id="53m-wg-kZ2"/>
+                                            <constraint firstAttribute="height" constant="768" id="TvQ-zb-YNl"/>
+                                        </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -72,20 +93,22 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rcy-fp-sev" secondAttribute="trailing" id="89O-Mm-zTh"/>
-                            <constraint firstItem="THj-fs-6Qv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B61-OZ-ksp"/>
-                            <constraint firstItem="rcy-fp-sev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XMF-pN-cJN"/>
+                            <constraint firstItem="8h7-fF-gzc" firstAttribute="trailing" secondItem="rcy-fp-sev" secondAttribute="trailing" id="89O-Mm-zTh"/>
+                            <constraint firstItem="THj-fs-6Qv" firstAttribute="trailing" secondItem="8h7-fF-gzc" secondAttribute="trailing" id="B61-OZ-ksp"/>
+                            <constraint firstItem="rcy-fp-sev" firstAttribute="leading" secondItem="8h7-fF-gzc" secondAttribute="leading" id="XMF-pN-cJN"/>
                             <constraint firstItem="rcy-fp-sev" firstAttribute="bottom" secondItem="THj-fs-6Qv" secondAttribute="top" id="j6k-xi-6z8"/>
-                            <constraint firstItem="rcy-fp-sev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="khq-mt-SfE"/>
-                            <constraint firstItem="THj-fs-6Qv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vnE-cS-Bth"/>
-                            <constraint firstItem="THj-fs-6Qv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yBD-Xa-qAS"/>
+                            <constraint firstItem="rcy-fp-sev" firstAttribute="top" secondItem="8h7-fF-gzc" secondAttribute="top" id="khq-mt-SfE"/>
+                            <constraint firstItem="THj-fs-6Qv" firstAttribute="bottom" secondItem="8h7-fF-gzc" secondAttribute="bottom" id="vnE-cS-Bth"/>
+                            <constraint firstItem="THj-fs-6Qv" firstAttribute="leading" secondItem="8h7-fF-gzc" secondAttribute="leading" id="yBD-Xa-qAS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="8h7-fF-gzc"/>
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="THj-fs-6Qv" id="Lwx-CV-iAH"/>
                         <outlet property="emojiCollectionView" destination="rcy-fp-sev" id="sxO-Nk-0Ie"/>
                         <outlet property="scrollView" destination="ZNC-Bf-wTf" id="Ic9-B0-jQm"/>
+                        <outlet property="scrollViewHeight" destination="TvQ-zb-YNl" id="fi6-3h-kbh"/>
+                        <outlet property="scrollViewWidth" destination="53m-wg-kZ2" id="ghd-np-tka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
